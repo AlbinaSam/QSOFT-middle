@@ -1,0 +1,253 @@
+.page-header {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.page-header__user-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-top: 19px;
+  padding-bottom: 19px;
+}
+
+.page-header__logo {
+  width: 136px;
+  height: 31px;
+  background-image: url("../img/header-logo.png");
+  background-repeat: no-repeat;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/header-logo@2x.png");
+    background-size: cover;
+  }
+}
+
+.page-header__form--desktop {
+  position: relative;
+  display: flex;
+  flex-grow: 1;
+  margin: 0 50px;
+
+  svg {
+    @include not-hover;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    stroke: #768298;
+  }
+
+  input[type="search"] {
+    @include font(14, 16);
+    @include not-hover;
+    width: 100%;
+    padding: 12px 38px 12px 20px;
+    background-color: #fafafa;
+    border: 1px solid #fafafa;
+    border-radius: 5px;
+    appearance: none;
+
+    &::-webkit-search-cancel-button {
+      appearance: none;
+    }
+
+    &::placeholder {
+      @include font(14, 22);
+      color: $light-grey;
+    }
+
+    &:hover,
+    &:focus {
+      @include hover;
+      outline: none;;
+      border-color: $grey;
+
+      & + svg {
+        @include hover;
+        stroke: $dark;
+      }
+    }
+  }
+}
+
+.page-header__phone {
+  display: flex;
+  flex-direction: column;
+  margin-right: 30px;
+
+  a {
+    @include not-hover;
+    @include font(18, 20);
+    text-decoration: none;
+
+    &:hover {
+      @include hover;
+      color: $bright-blue;
+    }
+  }
+
+  span {
+    @include font(14, 22);
+    color: $light-grey;
+  }
+}
+
+.page-header__account-link {
+  padding: 13px 30px;
+}
+
+.page-header__site-nav {
+  border-top: 1px solid #ebebf1 ;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.page-header__nav-button {
+  display: none;
+}
+
+.page-header__mobile-search {
+  display: none;
+}
+
+@media (max-width: 1150px) {
+  .page-header__form--desktop {
+    margin: 0 35px;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .page-header {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .page-header__user-nav {
+    flex-grow: 1;
+    justify-content: space-between;
+    width: auto;
+    padding-left: 20px;
+    padding-right: 0;
+    margin: 0;
+  }
+
+  .page-header__logo {
+    width: 100px;
+    margin-right: 10px;
+    background-size: contain;
+  }
+
+  .page-header__form--desktop {
+    display: none;
+  }
+
+  .page-header__phone {
+    margin-right: 20px;
+
+    a {
+      @include font(14, 22);
+
+      &:hover {
+        color: $dark;
+      }
+    }
+
+    span {
+      @include font(12, 16);
+    }
+  }
+
+  .page-header__account-link {
+    min-width: 0;
+    width: 30px;
+    height: 30px;
+    margin-right: 20px;
+    padding: 0;
+    font-size: 0;
+    background-color: transparent;
+    background-image: url("../img/icon-user.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .page-header__nav-button {
+    @include button-reset;
+    @include not-hover;
+    display: flex;
+    align-items: center;
+    width: 35px;
+    height: 50px;
+
+
+    svg {
+      fill: $light-grey;
+    }
+
+    &:active {
+      svg {
+        fill: $bright-blue;
+      }
+    }
+
+    &--close {
+      display: none;
+    }
+  }
+
+  .page-header__site-nav {
+    position: relative;
+    box-shadow: none;
+    border: none;
+    padding-right: 20px;
+
+    &--opened {
+      .page-header__nav-button--open {
+        display: none;
+      }
+      .page-header__nav-button--close {
+        display: flex
+      }
+
+      .nav {
+        display: block;
+      }
+    }
+  }
+
+  .page-header__mobile-search {
+    display: block;
+    width: 100%;
+    border-top: 1px solid #ebebf1;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.05);
+  }
+
+  .page-header__form--mobile {
+    position: relative;
+    width: 100%;
+
+    input[type="search"] {
+      @include font(14, 17);
+      width: 100%;
+      padding: 11px 49px 14px;
+      border: none;
+      appearance: none;
+
+      &::-webkit-search-cancel-button {
+        appearance: none;
+      }
+
+      &::placeholder {
+        @include font(14, 17);
+        color: #bbc4d6;
+      }
+    }
+
+    svg {
+      position: absolute;
+      left: 24px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}

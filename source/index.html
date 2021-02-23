@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>QSOFT</title>
+  <link rel="preload" href="fonts/roboto-regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/roboto-medium.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/roboto-bold.woff2" as="font" crossorigin="anonymous">
+  <link href="css/style.min.css" rel="stylesheet">
+</head>
+<body>
+  <header class="page-header">
+    <div class="container page-header__user-nav">
+      <a href="#" class="page-header__logo" aria-label="Логотип компании QSoft">
+      </a>
+      <form action="#" method="GET" class="page-header__form page-header__form--desktop">
+        <input type="search" name="header-search" autocomplete="off" placeholder="Найти на сайте...">
+        <svg width="18" height="18">
+          <use xlink:href="img/sprite.svg#icon-search"></use>
+        </svg>
+      </form>
+      <div class="page-header__phone">
+        <a href="tel:89996660013">8 (999) 666-00-13</a>
+        <span>Звоните с 8 до 23!</span>
+      </div>
+      <a href="#" class="button button--blue page-header__account-link">Войти</a>
+    </div>
+    <div class="page-header__site-nav">
+      <button class="page-header__nav-button" aria-label="Открыть меню">
+        <svg width="50" height="24" class="page-header__nav-button--open">
+          <use xlink:href="img/sprite.svg#icon-menu-burger"></use>
+        </svg>
+        <svg width="24" height="24" class="page-header__nav-button--close">
+          <use xlink:href="img/sprite.svg#icon-menu-cross"></use>
+        </svg>
+      </button>
+      <nav class="container nav">
+        <ul class="nav__list">
+          <li class="nav__item nav__item--actions">
+            <a href="#">Акции</a>
+          </li>
+          <li class="nav__item">
+            <a href="#">Товары</a>
+          </li>
+          <li class="nav__item">
+            <a href="#">Доставка и оплата</a>
+          </li>
+          <li class="nav__item">
+            <a href="#">Гарантия</a>
+          </li>
+          <li class="nav__item">
+            <a href="#">О нас</a>
+          </li>
+          <li class="nav__item">
+            <a href="#">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="page-header__mobile-search">
+      <form action="#" method="GET" class="page-header__form page-header__form--mobile">
+        <svg width="18" height="18">
+          <use xlink:href="img/sprite.svg#icon-search"></use>
+        </svg>
+        <input type="search" name="header-search" autocomplete="off" placeholder="Найти...">
+      </form>
+    </div>
+  </header>
+  <main class="page-main">
+
+    <section class="container popular">
+      <h2 class="section-title popular__title">Популярные товары</h2>
+      <ul class="goods">
+        <li class="goods__item goods__action goods__hit goods__best-price">
+          <div class="goods__labels">
+            <span class="goods__label goods__label--action">Акция</span>
+            <span class="goods__label goods__label--hit">Хит</span>
+            <span class="goods__label goods__label--best-price">Лучшая цена</span>
+          </div>
+          <img src="img/product/product-1.jpg" alt="Изображение товара" width="270" height="174" srcset="img/product/product-1.jpg 1x, img/product/product-1@2x.jpg 2x">
+          <div class="goods__item-details">
+            <h3 class="goods__item-title"><a href="#">Цветок, который стоит на столе, такой загадочный.</a></h3>
+            <p class="goods__item-description">А тут описание цветка, придающее ему загадочности и вызывающее интерес пользователя</p>
+            <div class="goods__item-order">
+              <div class="goods__item-price goods__item-price--discount">
+                <span class="goods__item-old-price">1 499 ₽</span>
+                <span class="goods__item-current-price">799 ₽</span>
+              </div>
+              <button class="goods__item-cart">
+                <svg width="26" height="26">
+                  <use xlink:href="img/sprite.svg#icon-cart"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </li>
+        <li class="goods__item goods__action">
+          <div class="goods__labels">
+            <span class="goods__label goods__label--action">Акция</span>
+            <span class="goods__label goods__label--hit">Хит</span>
+            <span class="goods__label goods__label--best-price">Лучшая цена</span>
+          </div>
+          <img src="img/product/product-2.jpg" alt="Изображение товара" width="270" height="174" srcset="img/product/product-2.jpg 1x, img/product/product-2@2x.jpg 2x">
+          <div class="goods__item-details">
+            <h3 class="goods__item-title"><a href="#">Набор юного инстаблогера</a></h3>
+            <p class="goods__item-description">Посмотрите на него.
+            Он покажет всем какой вы классный и творческий. Главное не забыть посидеть на подоконнике с бокаль...</p>
+            <div class="goods__item-order">
+              <div class="goods__item-price">
+                <span class="goods__item-old-price"></span>
+                <span class="goods__item-current-price">13 666 ₽</span>
+              </div>
+              <button class="goods__item-cart">
+                <svg width="26" height="26">
+                  <use xlink:href="img/sprite.svg#icon-cart"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </li>
+        <li class="goods__item goods__hit">
+          <div class="goods__labels">
+            <span class="goods__label goods__label--action">Акция</span>
+            <span class="goods__label goods__label--hit">Хит</span>
+            <span class="goods__label goods__label--best-price">Лучшая цена</span>
+          </div>
+          <img src="img/product/product-3.jpg" alt="Изображение товара" width="270" height="174" srcset="img/product/product-3.jpg 1x, img/product/product-3@2x.jpg 2x">
+          <div class="goods__item-details">
+            <h3 class="goods__item-title"><a href="#">Лампа. Просто лампа.</a></h3>
+            <p class="goods__item-description">В паре с загадочным цветком добавит загадочности вашему интерьеру</p>
+            <div class="goods__item-order">
+              <div class="goods__item-price goods__item-price--discount">
+                <span class="goods__item-old-price">2 699 ₽</span>
+                <span class="goods__item-current-price">1 789 ₽</span>
+              </div>
+              <button class="goods__item-cart">
+                <svg width="26" height="26">
+                  <use xlink:href="img/sprite.svg#icon-cart"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </li>
+        <li class="goods__item goods__action goods__hit">
+          <div class="goods__labels">
+            <span class="goods__label goods__label--action">Акция</span>
+            <span class="goods__label goods__label--hit">Хит</span>
+            <span class="goods__label goods__label--best-price">Лучшая цена</span>
+          </div>
+          <img src="img/product/product-4.jpg" alt="Изображение товара" width="270" height="174" srcset="img/product/product-4.jpg 1x, img/product/product-4@2x.jpg 2x">
+          <div class="goods__item-details">
+            <h3 class="goods__item-title"><a href="#">Классные деревянные минималистичные часы с...</a></h3>
+            <p class="goods__item-description">Все в ту же копилку загдочности вашего интерьера и вашей натуры</p>
+            <div class="goods__item-order">
+              <div class="goods__item-price goods__item-price--discount">
+                <span class="goods__item-old-price">2 199 ₽</span>
+                <span class="goods__item-current-price">1 899 ₽</span>
+              </div>
+              <button class="goods__item-cart">
+                <svg width="26" height="26">
+                  <use xlink:href="img/sprite.svg#icon-cart"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <a href="#" class="button popular__catalog-link">Смотреть каталог
+        <svg width="16" height="14">
+          <use xlink:href="img/sprite.svg#icon-arrow"></use>
+        </svg>
+      </a>
+    </section>
+    <section class="news">
+      <div class="container news__container">
+        <h2 class="section-title news__title">Новости компании</h2>
+        <ul class="news__list">
+          <li class="news__item news__item--narrow news__item--blue">
+            <a href="#">
+              <h3 class="news__item-title">Цветок, который стоит на столе, такой загадочный.</h3>
+              <p class="news__item-text">А тут описание цветка, придающее ему загадочности и вызывающее интерес пользователя</p>
+            </a>
+          </li>
+          <li class="news__item news__item--wide news__item--bg-1">
+            <a href="#">
+              <h3 class="news__item-title">Длинный заголовок большой новости</h3>
+              <p class="news__item-text">А тут описание цветка, придающее ему загадочности и вызывающее интерес пользователя</p>
+            </a>
+          </li>
+          <li class="news__item news__item--wide news__item--bg-2">
+            <a href="#">
+              <h3 class="news__item-title">Длинный заголовок большой новости</h3>
+              <p class="news__item-text">А тут описание цветка, придающее ему загадочности и вызывающее интерес пользователя</p>
+            </a>
+          </li>
+          <li class="news__item news__item--narrow news__item--orange">
+            <a href="#">
+              <h3 class="news__item-title">Цветок, который стоит на столе, такой загадочный.</h3>
+              <p class="news__item-text">А тут описание цветка, придающее ему загадочности и вызывающее интерес пользователя</p>
+            </a>
+          </li>
+        </ul>
+        <a href="#" class="button news__all-link">Смотреть все новости
+          <svg width="16" height="14">
+            <use xlink:href="img/sprite.svg#icon-arrow"></use>
+          </svg>
+        </a>
+      </div>
+    </section>
+    <section class="container partners">
+      <h2 class="section-title partners__title">Наши партнёры</h2>
+      <ul class="partners__list">
+        <li class="partners__item partners__item--1">
+          <a href="#" aria-label="Логотип партнёра"></a>
+        </li>
+        <li class="partners__item partners__item--2">
+          <a href="#" aria-label="Логотип партнёра"></a>
+        </li>
+        <li class="partners__item partners__item--3">
+          <a href="#" aria-label="Логотип партнёра"></a>
+        </li>
+        <li class="partners__item partners__item--4">
+          <a href="#" aria-label="Логотип партнёра"></a>
+        </li>
+        <li class="partners__item partners__item--5">
+          <a href="#" aria-label="Логотип партнёра"></a>
+        </li>
+        <li class="partners__item partners__item--6">
+          <a href="#" aria-label="Логотип партнёра"></a>
+        </li>
+        <li class="partners__item partners__item--7">
+          <a href="#" aria-label="Логотип партнёра"></a>
+        </li>
+      </ul>
+    </section>
+  </main>
+  <footer class="page-footer">
+    <div class="container page-footer__container">
+      <a href="#" class="page-footer__logo" aria-label="Логотип компании QSoft">
+        <svg width="135" height="28">
+          <use xlink:href="img/sprite.svg#footer-logo"></use>
+        </svg>
+      </a>
+      <ul class="page-footer__socials">
+        <li class="page-footer__social-item"><a href="#" aria-label="Мы на Youtube">
+          <svg width="31" height="30">
+            <use xlink:href="img/sprite.svg#icon-youtube"></use>
+          </svg>
+        </a></li>
+        <li class="page-footer__social-item"><a href="#" aria-label="Мы в Instagram">
+          <svg width="31" height="30">
+            <use xlink:href="img/sprite.svg#icon-insta"></use>
+          </svg>
+        </a></li>
+      </ul>
+      <ul class="page-footer__docs">
+        <li class="page-footer__doc">
+          <a href="#">Правила</a>
+        </li>
+        <li class="page-footer__doc">
+          <a href="#">Документы</a>
+        </li>
+        <li class="page-footer__doc">
+          <a href="#">Политика конфиденциальности</a>
+        </li>
+      </ul>
+      <a href="#" class="button button--blue page-footer__button">
+        <svg width="18" height="18">
+          <use xlink:href="img/sprite.svg#icon-phone"></use>
+        </svg>
+        Заказать звонок
+      </a>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

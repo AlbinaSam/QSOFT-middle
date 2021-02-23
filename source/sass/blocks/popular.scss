@@ -1,0 +1,32 @@
+.popular {
+  display: flex;
+  flex-direction: column;
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+
+.popular__catalog-link {
+  display: flex;
+  align-items: center;
+  align-self: flex-start;
+
+  &:hover {
+    svg {
+      @include hover;
+      fill: #6680ae;
+    }
+  }
+
+  svg {
+    @include not-hover;
+    fill: $bright-blue;
+    margin-left: 10px;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .popular {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}

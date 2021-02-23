@@ -1,0 +1,144 @@
+.partners {
+  padding-top: 90px;
+  padding-bottom: 61px;
+}
+
+.partners__list {
+  @include list-reset;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.partners__item {
+  @include not-hover;
+  width: 23.08%;
+  min-height: 100px;
+  margin-bottom: 30px;
+  margin-right: 2.56%;
+  padding: 17px;
+  border: 1px solid #ebebf1;
+  border-radius: 5px;
+
+  &:hover {
+    @include hover;
+    box-shadow: -3px 0px 40px rgba(0, 0, 0, 0.1), 0px 0px 10px rgba(164, 164, 164, 0.03);
+  }
+
+  @media (min-width: $desktop-min-width + 1) {
+    &:nth-child(4n) {
+      margin-right: 0
+    }
+  }
+
+  a {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &--1 {
+    a {
+      background-image: url("../img/partners/henkel.png");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/partners/henkel@2x.png");
+        background-size: cover;
+      }
+    }
+  }
+
+  &--2 {
+    a {
+      background-image: url("../img/partners/johndeere.png");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/partners/johndeere@2x.png");
+        background-size: cover;
+      }
+    }
+  }
+
+  &--3 {
+    a {
+      background-image: url("../img/partners/mac.png");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/partners/mac@2x.png");
+        background-size: cover;
+      }
+    }
+  }
+
+  &--4 {
+    a {
+      background-image: url("../img/partners/ikea.png");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/partners/ikea@2x.png");
+        background-size: cover;
+      }
+    }
+  }
+
+  &--5 {
+    a {
+      background-image: url("../img/partners/reebok.png");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/partners/reebok@2x.png");
+        background-size: cover;
+      }
+    }
+  }
+
+  &--6 {
+    a {
+      background-image: url("../img/partners/nike.png");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/partners/nike@2x.png");
+        background-size: cover;
+      }
+    }
+  }
+
+  &--7 {
+    a {
+      background-image: url("../img/partners/caterpillar.png");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/partners/caterpillar@2x.png");
+        background-size: cover;
+      }
+    }
+  }
+}
+
+@media (max-width: $desktop-min-width) {
+
+  .partners__item {
+    width: 31.62%;
+
+    @media (min-width: $tablet-width + 1) {
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: $tablet-width) {
+
+  .partners__list {
+    flex-direction: column;
+  }
+
+  .partners__item {
+    width: 100%;
+    height: 100px;
+    margin-right: 0;
+  }
+}

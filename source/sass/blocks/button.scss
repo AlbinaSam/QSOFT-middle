@@ -1,0 +1,72 @@
+.button {
+  @include button-reset;
+  @include not-hover;
+  @include font(14, 14);
+  display: inline-block;
+  box-sizing: border-box;
+  min-width: 100px;
+  padding: 17px 29px;
+  font-weight: 500;
+  background-color: #ffffff;
+  border: 1px solid $bright-blue;
+  border-radius: 5px;
+  color: $bright-blue;
+  text-decoration: none;
+
+  &:hover {
+    @include hover;
+    border-color: #6680ae;
+    color: #6680ae;
+  }
+
+  &:active {
+    border-color: #b0bdd4;
+    color: #b0bdd4;
+  }
+
+  &:disabled {
+    border-color: $light-grey;
+    color: $light-grey;
+    background-color: #ebebf1;
+  }
+
+  &--blue {
+    background-color: $bright-blue;
+    border: none;
+    color: #ffffff;
+
+    &:hover {
+      @include hover;
+      background-color: #6680ae;
+      color: #ffffff;
+    }
+
+    &:active {
+      background-color: #6680ae;
+      color: #ffffff;
+      opacity: 0.5;
+    }
+
+    &:disabled {
+      color: $light-grey;
+      color: #ffffff;
+      background-color: #ebebf1;
+    }
+  }
+}
+
+@media (max-width: $desktop-min-width) {
+  .button {
+    &:hover {
+      @include hover;
+      border-color: $bright-blue;
+      color: $bright-blue;
+    }
+
+    &--blue {
+      &:hover {
+        background-color: $bright-blue;
+      }
+    }
+  }
+}
